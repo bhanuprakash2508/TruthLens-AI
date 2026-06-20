@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Prediction History</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
 </head>
 <body>
 
@@ -14,62 +21,92 @@
 
     <div class="glass-card">
 
-        <h1>📊 Prediction History</h1>
+        <h1>TruthLens AI</h1>
 
-        <!-- Analytics Section -->
+        <p>
+            View previous predictions and stored classification history
+        </p>
+
         <div class="stats-container">
 
             <div class="stat-box">
-                <h3>Total</h3>
+
+                <h3>Total Checked</h3>
+
                 <p>{{ total }}</p>
+
             </div>
 
             <div class="stat-box real-box">
-                <h3>REAL</h3>
+
+                <h3>Real Articles</h3>
+
                 <p>{{ real_count }}</p>
+
             </div>
 
             <div class="stat-box fake-box">
-                <h3>FAKE</h3>
+
+                <h3>Fake Articles</h3>
+
                 <p>{{ fake_count }}</p>
+
             </div>
 
         </div>
 
-        <!-- History Table -->
         <table>
 
             <tr>
+
                 <th>Article Preview</th>
+
                 <th>Prediction</th>
+
                 <th>Confidence</th>
+
                 <th>Timestamp</th>
+
             </tr>
 
             {% for record in records %}
 
             <tr>
 
-                <!-- Article Preview -->
                 <td class="article-column">
+
                     {{ record[0][:60] }}...
+
                 </td>
 
-                <!-- Prediction -->
                 {% if record[1] == "REAL" %}
-                    <td class="real-cell">REAL</td>
+
+                    <td class="real-cell">
+
+                        REAL
+
+                    </td>
+
                 {% else %}
-                    <td class="fake-cell">FAKE</td>
+
+                    <td class="fake-cell">
+
+                        FAKE
+
+                    </td>
+
                 {% endif %}
 
-                <!-- Confidence -->
                 <td>
+
                     {{ record[2] }}%
+
                 </td>
 
-                <!-- Timestamp -->
                 <td>
+
                     {{ record[3] }}
+
                 </td>
 
             </tr>
@@ -78,35 +115,43 @@
 
         </table>
 
-        <!-- Pagination -->
         <div class="pagination">
 
             {% if page > 1 %}
+
                 <a href="/history?page={{ page-1 }}">
-                    ⬅ Previous
+
+                    Previous
+
                 </a>
+
             {% endif %}
 
             <span>
+
                 Page {{ page }} of {{ total_pages }}
+
             </span>
 
             {% if page < total_pages %}
+
                 <a href="/history?page={{ page+1 }}">
-                    Next ➡
+
+                    Next
+
                 </a>
+
             {% endif %}
 
         </div>
 
-        <!-- Clear History -->
         <div class="action-buttons">
 
             <a href="/clear_history"
                class="clear-btn"
-               onclick="return confirm('Are you sure you want to clear all history?');">
+               onclick="return confirm('Are you sure you want to clear history?');">
 
-                🗑 Clear History
+                Clear History
 
             </a>
 
@@ -114,9 +159,10 @@
 
         <br>
 
-        <!-- Back Button -->
         <a href="/" class="back-btn">
-            ⬅ Go Back
+
+            Go Back
+
         </a>
 
     </div>

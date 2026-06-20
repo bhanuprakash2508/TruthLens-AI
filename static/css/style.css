@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 /* Body */
@@ -16,6 +16,8 @@ body{
     padding:20px;
 }
 
+/* Main Container */
+
 .main-container{
     width:100%;
     display:flex;
@@ -27,11 +29,11 @@ body{
 .glass-card{
     width:720px;
     background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,0.15);
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.12);
+    padding:32px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
     text-align:center;
 }
 
@@ -40,18 +42,25 @@ body{
 h1{
     color:white;
     margin-bottom:12px;
-    font-size:30px;
+    font-size:32px;
+    font-weight:700;
+}
+
+h2{
+    margin-bottom:10px;
 }
 
 h3{
     color:#facc15;
     margin-bottom:10px;
+    font-size:18px;
 }
 
 p{
     color:#cbd5e1;
     margin-bottom:18px;
     font-size:15px;
+    line-height:1.5;
 }
 
 /* Form */
@@ -60,7 +69,7 @@ textarea{
     width:100%;
     height:160px;
     background:#0f172a;
-    border:none;
+    border:1px solid #334155;
     border-radius:14px;
     padding:16px;
     color:white;
@@ -68,6 +77,13 @@ textarea{
     font-size:15px;
     margin-bottom:18px;
 }
+
+textarea:focus{
+    outline:none;
+    border:1px solid #3b82f6;
+}
+
+/* Button */
 
 button{
     background:#2563eb;
@@ -77,11 +93,11 @@ button{
     border-radius:10px;
     cursor:pointer;
     font-size:15px;
-    transition:0.3s;
+    font-weight:500;
 }
 
 button:hover{
-    transform:scale(1.03);
+    background:#1d4ed8;
 }
 
 /* Result Page */
@@ -102,11 +118,13 @@ button:hover{
 .real-text{
     color:#22c55e;
     margin-bottom:10px;
+    font-weight:bold;
 }
 
 .fake-text{
     color:#ef4444;
     margin-bottom:10px;
+    font-weight:bold;
 }
 
 /* Progress Bar */
@@ -148,7 +166,7 @@ button:hover{
 .back-btn{
     color:#60a5fa;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
     font-size:14px;
 }
 
@@ -160,7 +178,6 @@ button:hover{
     padding:8px 14px;
     border:1px solid #334155;
     border-radius:8px;
-    transition:0.3s;
 }
 
 .history-btn:hover{
@@ -177,7 +194,7 @@ table{
 
 th, td{
     border:1px solid #334155;
-    padding:8px;
+    padding:10px;
     color:white;
     text-align:center;
     font-size:13px;
@@ -287,7 +304,6 @@ td{
     text-decoration:none;
     border-radius:8px;
     font-weight:bold;
-    transition:0.3s;
     font-size:14px;
 }
 
@@ -315,4 +331,22 @@ td{
 
 .keyword-box li{
     margin-bottom:4px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .glass-card{
+        width:100%;
+        padding:24px;
+    }
+
+    .stats-container{
+        flex-direction:column;
+    }
+
+    h1{
+        font-size:28px;
+    }
 }

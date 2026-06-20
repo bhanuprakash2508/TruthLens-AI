@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>TruthLens AI Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
 </head>
 <body>
 
@@ -12,32 +21,54 @@
 
     <div class="glass-card">
 
-        <h1>📰 Analysis Result</h1>
+        <h1>TruthLens AI</h1>
+
+        <p>
+            AI-powered news authenticity analysis completed successfully
+        </p>
 
         <div class="article-preview">
+
+            <strong>Article Preview:</strong><br><br>
+
             {{ article }}
+
         </div>
 
         {% if prediction == "FAKE" %}
-            <h2 class="fake-text">⚠ Potentially FAKE News</h2>
+
+            <h2 class="fake-text">
+
+                ⚠ Potentially FAKE News
+
+            </h2>
+
         {% else %}
-            <h2 class="real-text">✅ Likely REAL News</h2>
+
+            <h2 class="real-text">
+
+                ✅ Likely REAL News
+
+            </h2>
+
         {% endif %}
 
-        <h3>Confidence Score: {{ confidence }}%</h3>
+        <h3>Confidence Score : {{ confidence }}%</h3>
 
         <div class="progress-bar">
+
             <div class="progress-fill"
                  style="width: {{ confidence }}%;">
+
             </div>
+
         </div>
 
-        <!-- Suspicious Keywords -->
         {% if keywords %}
 
         <div class="keyword-box">
 
-            <strong>⚠ Suspicious Phrases Detected:</strong>
+            <strong>Suspicious Phrases Detected:</strong>
 
             <ul>
 
@@ -53,20 +84,24 @@
 
         {% endif %}
 
-        <!-- AI Explanation -->
         <div class="ai-note">
 
-            <strong>AI Explanation:</strong><br><br>
+            <strong>Model Information</strong><br><br>
 
-            Prediction generated using a Machine Learning model trained on
-            large-scale news datasets. Results are based on textual
-            patterns learned during training.
+            Prediction generated using a trained Machine Learning model 
+            that learned patterns from real and fake news datasets.
 
         </div>
 
-        <a href="/" class="back-btn">
-            Analyze Another Article
-        </a>
+        <div class="links">
+
+            <a href="/" class="back-btn">
+
+                Analyze Another Article
+
+            </a>
+
+        </div>
 
     </div>
 

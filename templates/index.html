@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>TruthLens AI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
 </head>
 <body>
 
@@ -14,8 +23,11 @@
 
         <h1>TruthLens AI</h1>
 
+        <h3>Fake News Detection System</h3>
+
         <p>
-            AI Powered Fake News Classification using NLP and Machine Learning
+            Analyze news articles and detect whether the content is real or fake 
+            using Machine Learning and Natural Language Processing.
         </p>
 
         <form action="/predict" method="POST">
@@ -25,15 +37,21 @@
                 placeholder="Paste news article here..."
                 required></textarea>
 
-            <button type="submit">Analyze News</button>
+            <button type="submit">
+
+                Analyze News
+
+            </button>
 
         </form>
 
-        <!-- Added History Button -->
         <div class="links">
 
-            <a href="/history" class="history-btn">
+            <a href="/history"
+               class="history-btn">
+
                 View Prediction History
+
             </a>
 
         </div>
