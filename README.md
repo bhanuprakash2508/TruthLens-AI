@@ -233,9 +233,10 @@ This project helped in understanding:
 
 ## Author
 
-**CH Bhanu Prakash**
+**Chintha Bhanu Prakash**
 
 GitHub: https://github.com/bhanuprakash2508
+
 LinkedIn: https://linkedin.com/in/bhanuprakash-chintha
 
 ---
