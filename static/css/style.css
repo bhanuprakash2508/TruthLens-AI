@@ -1,0 +1,318 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* Body */
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.main-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+/* Main Card */
+
+.glass-card{
+    width:720px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+/* Typography */
+
+h1{
+    color:white;
+    margin-bottom:12px;
+    font-size:30px;
+}
+
+h3{
+    color:#facc15;
+    margin-bottom:10px;
+}
+
+p{
+    color:#cbd5e1;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+/* Form */
+
+textarea{
+    width:100%;
+    height:160px;
+    background:#0f172a;
+    border:none;
+    border-radius:14px;
+    padding:16px;
+    color:white;
+    resize:none;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+/* Result Page */
+
+.article-preview{
+    background:#020617;
+    padding:16px;
+    border-radius:12px;
+    text-align:left;
+    color:white;
+    line-height:1.5;
+    max-height:140px;
+    overflow:auto;
+    margin:18px 0;
+    font-size:14px;
+}
+
+.real-text{
+    color:#22c55e;
+    margin-bottom:10px;
+}
+
+.fake-text{
+    color:#ef4444;
+    margin-bottom:10px;
+}
+
+/* Progress Bar */
+
+.progress-bar{
+    width:100%;
+    height:16px;
+    background:#334155;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:18px;
+}
+
+.progress-fill{
+    height:100%;
+    background:#3b82f6;
+}
+
+/* AI Note */
+
+.ai-note{
+    background:#111827;
+    color:#94a3b8;
+    padding:16px;
+    border-radius:12px;
+    text-align:left;
+    line-height:1.6;
+    margin-bottom:18px;
+    font-size:14px;
+}
+
+/* Links */
+
+.links{
+    margin-top:18px;
+}
+
+.links a,
+.back-btn{
+    color:#60a5fa;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* History Button */
+
+.history-btn{
+    display:inline-block;
+    margin-top:8px;
+    padding:8px 14px;
+    border:1px solid #334155;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.history-btn:hover{
+    background:rgba(255,255,255,0.08);
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:18px;
+}
+
+th, td{
+    border:1px solid #334155;
+    padding:8px;
+    color:white;
+    text-align:center;
+    font-size:13px;
+}
+
+th{
+    background:#1d4ed8;
+}
+
+td{
+    background:rgba(255,255,255,0.03);
+}
+
+/* Article Preview Column */
+
+.article-column{
+    text-align:left;
+    max-width:220px;
+    line-height:1.4;
+}
+
+/* Prediction Colors */
+
+.real-cell{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+.fake-cell{
+    color:#ef4444;
+    font-weight:bold;
+}
+
+/* Analytics Cards */
+
+.stats-container{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    margin:18px 0;
+}
+
+.stat-box{
+    flex:1;
+    background:rgba(255,255,255,0.05);
+    padding:14px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.stat-box h3{
+    color:white;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.stat-box p{
+    font-size:22px;
+    font-weight:bold;
+    color:#60a5fa;
+}
+
+.real-box p{
+    color:#22c55e;
+}
+
+.fake-box p{
+    color:#ef4444;
+}
+
+/* Pagination */
+
+.pagination{
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    align-items:center;
+}
+
+.pagination a{
+    color:#60a5fa;
+    text-decoration:none;
+    font-weight:bold;
+    padding:6px 12px;
+    border:1px solid #334155;
+    border-radius:8px;
+    font-size:14px;
+}
+
+.pagination span{
+    color:white;
+    font-size:14px;
+}
+
+/* Clear Button */
+
+.action-buttons{
+    margin-top:18px;
+}
+
+.clear-btn{
+    display:inline-block;
+    padding:8px 14px;
+    background:#dc2626;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+    font-size:14px;
+}
+
+.clear-btn:hover{
+    background:#b91c1c;
+}
+
+/* Suspicious Keyword Box */
+
+.keyword-box{
+    background:rgba(239,68,68,0.12);
+    border:1px solid #ef4444;
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:18px;
+    text-align:left;
+    color:#fca5a5;
+    font-size:14px;
+}
+
+.keyword-box ul{
+    margin-top:8px;
+    margin-left:18px;
+}
+
+.keyword-box li{
+    margin-bottom:4px;
+}

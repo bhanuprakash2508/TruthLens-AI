@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthLens AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="glass-card">
+
+        <h1>TruthLens AI</h1>
+
+        <p>
+            AI Powered Fake News Classification using NLP and Machine Learning
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <textarea
+                name="news"
+                placeholder="Paste news article here..."
+                required></textarea>
+
+            <button type="submit">Analyze News</button>
+
+        </form>
+
+        <!-- Added History Button -->
+        <div class="links">
+
+            <a href="/history" class="history-btn">
+                View Prediction History
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
